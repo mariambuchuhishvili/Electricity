@@ -29,6 +29,7 @@ namespace Electricity
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +61,8 @@ namespace Electricity
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(420, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 17);
@@ -68,12 +71,14 @@ namespace Electricity
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(218, 109);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.Size = new System.Drawing.Size(102, 33);
             this.button1.TabIndex = 3;
             this.button1.Text = "Посчитать";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
@@ -86,6 +91,8 @@ namespace Electricity
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(215, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 17);
@@ -95,6 +102,8 @@ namespace Electricity
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(215, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 17);
@@ -104,7 +113,9 @@ namespace Electricity
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(326, 115);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(326, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 7;
@@ -113,7 +124,9 @@ namespace Electricity
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(400, 115);
+            this.resultLabel.BackColor = System.Drawing.Color.Transparent;
+            this.resultLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.resultLabel.Location = new System.Drawing.Point(400, 118);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(32, 17);
             this.resultLabel.TabIndex = 8;
@@ -123,6 +136,8 @@ namespace Electricity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(618, 450);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.label4);
@@ -133,8 +148,10 @@ namespace Electricity
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Калькулятор оплаты электричества";
             this.ResumeLayout(false);
             this.PerformLayout();
 
