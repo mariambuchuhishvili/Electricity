@@ -91,6 +91,7 @@ namespace Electricity
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(218, 109);
             this.button1.Name = "button1";
@@ -158,6 +159,7 @@ namespace Electricity
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(463, 29);
             this.button2.Name = "button2";
@@ -170,6 +172,7 @@ namespace Electricity
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(463, 109);
             this.button3.Name = "button3";

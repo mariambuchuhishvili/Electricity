@@ -38,6 +38,7 @@ namespace Electricity
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.Control;
             this.monthCalendar1.Location = new System.Drawing.Point(18, 18);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
@@ -63,6 +64,7 @@ namespace Electricity
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(251, 71);
             this.button1.Name = "button1";
