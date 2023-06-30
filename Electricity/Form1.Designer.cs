@@ -84,9 +84,9 @@ namespace Electricity
             this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(420, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 17);
+            this.label1.Size = new System.Drawing.Size(192, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Цена 1 Кв/ч = 4 руб. 1 коп.";
+            this.label1.Text = "Цена 1 кВт/ч = 4 руб. 1 коп.";
             // 
             // button1
             // 
@@ -114,9 +114,9 @@ namespace Electricity
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(215, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 17);
+            this.label2.Size = new System.Drawing.Size(168, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Предидущие показания";
+            this.label2.Text = "Предыдущие показания";
             // 
             // label3
             // 
@@ -163,7 +163,7 @@ namespace Electricity
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 67);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Добавить предидущие показания";
+            this.button2.Text = "Добавить предыдущие показания";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
