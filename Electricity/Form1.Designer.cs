@@ -29,8 +29,11 @@ namespace Electricity
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.electricityTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.electricityDBDataSet = new Electricity.ElectricityDBDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,6 +42,11 @@ namespace Electricity
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.resultLabel = new System.Windows.Forms.Label();
+            this.electricityTableTableAdapter = new Electricity.ElectricityDBDataSetTableAdapters.ElectricityTableTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.electricityTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.electricityDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -51,10 +59,21 @@ namespace Electricity
             this.listBox1.TabIndex = 0;
             this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseClick);
             // 
+            // electricityTableBindingSource
+            // 
+            this.electricityTableBindingSource.DataMember = "ElectricityTable";
+            this.electricityTableBindingSource.DataSource = this.electricityDBDataSet;
+            // 
+            // electricityDBDataSet
+            // 
+            this.electricityDBDataSet.DataSetName = "ElectricityDBDataSet";
+            this.electricityDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(210, 36);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 1;
             // 
@@ -132,6 +151,34 @@ namespace Electricity
             this.resultLabel.TabIndex = 8;
             this.resultLabel.Text = "___";
             // 
+            // electricityTableTableAdapter
+            // 
+            this.electricityTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(463, 29);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 67);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Добавить предидущие показания";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(463, 109);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 67);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Удалить выбранное показание";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,6 +186,8 @@ namespace Electricity
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(618, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -152,6 +201,9 @@ namespace Electricity
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Калькулятор оплаты электричества";
+            this.Click += new System.EventHandler(this.Form1_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.electricityTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.electricityDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +220,11 @@ namespace Electricity
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label resultLabel;
+        private ElectricityDBDataSet electricityDBDataSet;
+        private System.Windows.Forms.BindingSource electricityTableBindingSource;
+        private ElectricityDBDataSetTableAdapters.ElectricityTableTableAdapter electricityTableTableAdapter;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
